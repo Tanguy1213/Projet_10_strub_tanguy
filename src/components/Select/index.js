@@ -23,7 +23,7 @@ const Select = ({
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}
-      <div className="Select">
+      <div className="Select" >
         <ul>
           <li className={collapsed ? "SelectTitle--show" : "SelectTitle--hide"}>
             {value || (!titleEmpty && "Toutes")}
@@ -42,7 +42,7 @@ const Select = ({
                     defaultChecked={value === s}
                     name="selected"
                     type="radio"
-                  />{" "}
+                    required/>{" "}
                   {s}
                 </li>
               ))}
