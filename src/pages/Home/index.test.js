@@ -29,16 +29,27 @@ describe("When Form is created", () => {
 
 
 describe("When a page is created", () => {
-  it("a list of events is displayed", () => {
-    // to implement
+  it("a list of events is displayed",() => {
+    render(<Home />);
+    const eventsList = screen.getByTestId("events-test");
+    expect(eventsList).toBeDefined();
+  });
+
+  it("a list of people is displayed", () => {
+    render(<Home />);
+    const peopleList = screen.getByTestId("equipes-test");
+    expect(peopleList).toBeDefined();
   })
-  it("a list a people is displayed", () => {
-    // to implement
-  })
+
   it("a footer is displayed", () => {
-    // to implement
+    render(<Home />);
+    const testFooter = screen.getByTestId("footer-test");
+    expect(testFooter).toBeDefined();
   })
+
   it("an event card, with the last event, is displayed", () => {
-    // to implement
+    render(<Home />);
+    const lastEvent = screen.getByTestId("last-event-card-test");
+    expect(lastEvent).toBeDefined();
   })
 });
